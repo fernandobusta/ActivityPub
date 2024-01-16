@@ -3,6 +3,7 @@
  * @since 2023-04-02
  */
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,11 +17,19 @@ public class Person {
     private String name;                    // Name of profile
     private String preferredUsername;       // Username of profile
     private String summary;                 // Summary of account
-    private int inbox;                      // Inbox of account
-    private int outbox;                     // Outbox of account
+    private Inbox inbox;                    // Inbox of account
+    private Outbox outbox;                  // Outbox of account
     private List<Person> followers;         // Followers of account
     private List<Person> following;         // Following profiles of account
+    private List<StreamObject> likes;
 
+    /**
+     * Constructor for Person 
+     * @param URI
+     * @param name
+     * @param preferredUsername
+     * @param summary
+     */
     public Person(String URI, String name, String preferredUsername, String summary) {
         setURI(URI);
         setName(name);
@@ -28,27 +37,38 @@ public class Person {
         setSummary(summary);
         setInbox();
         setOutbox();
+        setFollowers();
+        setFollowing();
+        setLikes();
     }
 
     // =============================== Getters and Setters ======================
     /**
      * URI
-     * @return
+     * @return URI
      */
     public String getURI() {
         return this.URI;
     }
+    /**
+     * Set URI
+     * @param URI
+     */
     public void setURI(String URI) {
         this.URI = URI;
     }
     
     /**
      * Name
-     * @return
+     * @return Name
      */
     public String getName() {
         return this.name;
     }
+    /**
+     * Set Name
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
@@ -60,70 +80,108 @@ public class Person {
     public String getPreferredUsername() {
         return this.preferredUsername;
     }
+    /**
+     * Set Username
+     * @param preferredUsername
+     */
     public void setPreferredUsername(String preferredUsername) {
         this.preferredUsername = preferredUsername;
     }
     
     /**
      * Summary
-     * @return
+     * @return Summary
      */
     public String getSummary() {
         return this.summary;
     }
+    /**
+     * Set Summary
+     * @param summary
+     */
     public void setSummary(String summary) {
         this.summary = summary;
     }
     
     /**
      * Inbox
-     * @return
+     * @return Inbox of probile
      */
-    public int getInbox() {
-        return inbox;
+    public Inbox getInbox() {
+        return this.inbox;
     }
+    /**
+     * Create new Inbox
+     */
     public void setInbox() {
+        this.inbox = new ProfileInbox();
     }
 
     /**
      * Outbox
-     * @return
+     * @return Outbox of profile
      */
-    public int getOutbox() {
+    public Outbox getOutbox() {
         return outbox;
     }
+    /**
+     * Create new Outbox
+     */
     public void setOutbox() {
+        this.outbox = new ProfileOutbox();
     }
 
     /**
      * Followers
-     * @return
+     * @return list of Followers
      */
     public List<Person> getFollowers() {
         return followers;
     }
-    public void setFollowers(List<Person> followers) {
-        this.followers = followers;
+    /**
+     * Set Followers
+     */
+    public void setFollowers() {
+        this.followers = new ArrayList<>();
     }
 
     /**
      * Following
-     * @return
+     * @return list of users following
      */
     public List<Person> getFollowing() {
         return following;
     }
-    public void setFollowing(List<Person> following) {
-        this.following = following;
+    /**
+     * Set the followers
+     */
+    public void setFollowing() {
+        this.following = new ArrayList<>();
     }
 
-    // ============================ toString ===========================
+    /**
+     * Get the objects liked by profile
+     * @return list of StreamObjects
+     */
+    public List<StreamObject> getLikes() {
+        return this.likes;
+    }
+    /**
+     * Set Likes
+     */
+    public void setLikes() {
+        this.likes = new ArrayList<>();
+    }
+    
     /**
      * toString method returning info about person
-     * @return String
+     * @return String message
      */
     public String toString() {
-        String message = "";
+        String message = "- URI: " + this.URI;
+        message += "\n- name: " + this.name;
+        message += "\n- prefered username: " + this.preferredUsername;
+        message += "\n- summary: " + this.summary;
         return message;
     }
 }

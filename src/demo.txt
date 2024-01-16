@@ -1,0 +1,42 @@
+Creating Person 1- URI: https://www.MyApp.com/user/fernando
+- name: Fernando Bustamante
+- prefered username: busta
+- summary: I am Fernando
+
+Creating Person 2- URI: https://www.MyApp.com/user/jervin
+- name: Jervin Baylon
+- prefered username: jervinio
+- summary: I am Jervin
+
+Person 1 follows Person 2
+- URI: https://www.MyApp.com/user/fernando/follow/jervinio
+- person: - URI: https://www.MyApp.com/user/fernando
+- name: Fernando Bustamante
+- prefered username: busta
+- summary: I am Fernando
+- other: - URI: https://www.MyApp.com/user/jervin
+- name: Jervin Baylon
+- prefered username: jervinio
+- summary: I am Jervin
+- summary: Fernando follows Jervinio
+
+Person 1 creates a post
+- URI: https://www.MyApp.com/user/fernando/post/#0000
+- audience: PRIVATE
+- likes: []
+- shares: 0
+- content: This is a Post by Fernando
+- name: My Post
+- published: 2023-04-15
+- deleted: false
+ActivityCreate@330bedb4
+
+Person 2 likes post
+
+Person 1 inbox
+- Inbox: 0
+
+Person 1 outbox
+- Outbox: 0
+
+Demo finished

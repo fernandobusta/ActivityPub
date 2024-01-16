@@ -1,0 +1,20 @@
+REPORT
+
+This was a very insightful project and it allowed me to understand more the concepts of OOP in Java.
+
+I developed this project on my own, however, a part of the project was developed in the labs, with a group of friends, we were helping each other out.
+
+As for the code, this project has implemented all of the basic requirements. A person can create a profile, follow other profiles, create and delete posts, like posts, check and add to the inbox and outbox.
+The process of implementing it involved a lot of hours, coffees, many Google searches and some ChatGPT queries. But worry not, Stack Overflow is still better than ChatGPT.
+
+Writing the code was both interesting and frustrating. The thing I struggled with the most was the demo. Even though most of the code was fairly structured and basic, creating a methods that implements all functionalities cohesively can be tricky. The program works and the logic seems right, but the implementation, is something else.
+
+For testing the project, I tested small features and classes as I went along, and the final test was inside the demo, which as I said, I struggled with a bit. However, creating a kind of mind map of the operations following the guidelines of classes and interfaces made it much easier. Some discussions with friends as well.
+
+For next project I will start defining the demo first, as a sort of pseudo code, to underline and indicate all operations that must take place. This way the implementation will seem much clearer. And I definately, won't submit it the last day...
+
+Overall, it was a very interesting project, my next thoughts are: How can I add a GUI or some sort of front-end and how to connect it to the java backend? When the code is deployed, how does the backend handle every individual thread and communicates then to the database without overlaps?
+But that will have to wait until exams are done.
+
+Fernando Bustamante
+21762615
